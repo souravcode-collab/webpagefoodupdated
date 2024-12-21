@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodzone</title>
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE2SsRy0pcwcB2OjIiB5t40wvAco2NNSboZg&s">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+        background-color: orange;
+    }
+    .navbar-red {
+      background-color: red;
+    }
+    .navbar-red .nav-link, 
+    .navbar-red .navbar-brand {
+      color: white;
+    }
+    .navbar-red .nav-link:hover {
+      color: yellow;
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    #orderForm {
+      background: url('https://img.freepik.com/premium-photo/containers-with-measuring-spoon-black-background_1048944-16608188.jpg?semt=ais_hybrid') no-repeat center center;
+      background-size: cover;
+      color: skyblue;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      
+    }
+    .payment-methods img {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    
+    }
+    .payment-methods img:hover {
+      transform: scale(1.05); 
+    }
+
+ /
+    #orderForm input,
+    #orderForm textarea,
+    #orderForm select {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    #orderForm label {
+      font-size: 14px;
+    }
+
+    #orderForm button {
+      padding: 10px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-red">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-utensils"></i> Foodzone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <h1 class="text-center mb-4">Food Menu</h1>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKqzrE2hZnTGh65h_SlXd8X8V75HXdXC3Eg&s" class="card-img-top" alt="Pizza">
+          <div class="card-body">
+            <h5 class="card-title">Pizza 100/-</h5>
+            <p class="card-text">Delicious cheesy pizza with your favorite toppings.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxZKL7WMikW3J0rlF60zK8CtAXOUgKBDZGPw&s" class="card-img-top" alt="Burger">
+          <div class="card-body">
+            <h5 class="card-title">Burger 80/-</h5>
+            <p class="card-text">Juicy grilled burger served with crispy fries.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://c.ndtvimg.com/2023-01/6g5e4tf_white-sauce-pasta_625x300_10_January_23.jpg?im=FeatureCrop,algorithm=dnn,width=345,height=250?downsize=200:155" class="card-img-top" alt="Pasta">
+          <div class="card-body">
+            <h5 class="card-title">Pasta 120/-</h5>
+            <p class="card-text">Creamy pasta with a rich and flavorful sauce.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwnd6kBugw_EBq-vn1ES4USgbrNhWa35VvcA&s" class="card-img-top" alt="Salad">
+          <div class="card-body">
+            <h5 class="card-title">Salad 50/-</h5>
+            <p class="card-text">Fresh and healthy salad with seasonal ingredients.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://media.istockphoto.com/id/497022342/photo/japanese-restaurant-sushi-dish.jpg?s=612x612&w=0&k=20&c=kiFHr2Y_WReN_AqwQExCe5acickkBHhImEtFi59CyMQ=" class="card-img-top" alt="Sushi">
+          <div class="card-body">
+            <h5 class="card-title">Sushi 200/- (6 pcs)</h5>
+            <p class="card-text">Authentic sushi rolls made with fresh fish and rice.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://i0.wp.com/strawberriesforsupper.com/wp-content/uploads/2011/07/Blueberry-Maple-Ice-Cream-1-300x200.jpg?fit=300%2C200&ssl=1" class="card-img-top" alt="Ice Cream">
+          <div class="card-body">
+            <h5 class="card-title">Ice Cream 70/-</h5>
+            <p class="card-text">Creamy ice cream with a variety of flavors to choose from.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Give your order here</h1>
+    <form id="orderForm" class="p-4 border rounded" onsubmit="return submitOrder(event)">
+      <div class="mb-3">
+        <label for="foodName" class="form-label">Food Name</label>
+        <input type="text" class="form-control" id="foodName" placeholder="Enter food name" list="foodSuggestions" required>
+        <datalist id="foodSuggestions">
+          <option value="Pizza">
+          <option value="Burger">
+          <option value="Pasta">
+          <option value="Salad">
+          <option value="Sushi">
+        </datalist>
+      </div>
+
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required>
+      </div>
+
+    
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea class="form-control" id="address" placeholder="Enter your address" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      
+      <div class="mb-3">
+        <label for="paymentMethod" class="form-label">Payment Method</label>
+        <select class="form-control" id="paymentMethod" required>
+          <option value="">Choose Payment Method</option>
+          <option value="UPI">UPI</option>
+          <option value="Card">Card</option>
+          <option value="Cash">Cash on Delivery</option>
+        </select>
+      </div>
+
+      <button type="submit" id="orderButton" class="btn btn-primary w-100">Order</button>
+    </form>
+  </div>
+
+
+  <div class="container mt-5 text-center">
+    <h2>We Accept Payments</h2>
+    <div class="payment-methods">
+      <img src="https://cdn.sketchbubble.com/pub/media/catalog/product/optimized1/4/d/4d4ed5a60d55a0afbb4aeeb74b4a960a0eff319567fdd25151ebec4be7185f1c/upi-slide1.png" alt="UPI">
+      <img src="https://cdn-icons-png.freepik.com/512/330/330709.png" alt="Card">
+      <img src="https://png.pngtree.com/png-clipart/20210530/original/pngtree-pickup-van-cash-on-delivery-round-bagke-or-sticker-design-with-png-image_6339714.png" alt="Cash on Delivery">
+    </div>
+  </div>
+
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>About Us</h5>
+          <p>We provide the finest quality food and services to make your dining experience delightful.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#menu" class="text-white text-decoration-none">Menu</a></li>
+            <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+            <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-telephone-fill"></i> +123 456 7890 <br> <i class="bi bi-envelope-fill"></i> info@foodwebsite.com</p>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <div class="text-center">
+        <p class="mb-0">© 2024 Food Website. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitOrder(event) {
+      event.preventDefault(); 
+
+  
+      const foodName = document.getElementById('foodName').value;
+      const quantity = document.getElementById('quantity').value;
+      const address = document.getElementById('address').value;
+      const phone = document.getElementById('phone').value;
+      const paymentMethod = document.getElementById('paymentMethod').value;
+
+   
+      const foodPrices = {
+        "Pizza": 100,
+        "Burger": 80,
+        "Pasta": 120,
+        "Salad": 50,
+        "Sushi": 200
+      };
+
+
+      const pricePerItem = foodPrices[foodName] || 0;
+      const totalAmount = pricePerItem * quantity;
+
+
+      alert(`Order Confirmed!\n\nFood: ${foodName}\nQuantity: ${quantity}\nTotal Amount: ${totalAmount}\nAddress: ${address}\nPhone: ${phone}\nPayment Method: ${paymentMethod}`);
+    }
+  </script>
+
+</body>
+</html>
